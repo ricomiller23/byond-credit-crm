@@ -8,7 +8,7 @@ export const DEAL_TERMS = {
   seniorPercentage: "10%", // $30M / $300M
   juniorCapital: "$280,000,000 convertible seller note; 5%, 5-year; ~30% equity at qualified financing",
   collateral: "First-priority perfected lien on the OnliBitcoin Patent Family and proceeds (USPTO recordation at close)",
-  independentValuation: "Teknos: $340M–$460M, dated September 3, 2026",
+  independentValuation: "Teknos Associates: $340M–$460M (Opinion dated September 3, 2026)",
   valuationFloorNum: 340000000,
   valuationCeilingNum: 460000000,
   appraisedLtv: "6.5% – 8.8%",
@@ -26,17 +26,17 @@ export const DEAL_TERMS = {
   samplyUrl: "https://samply.app/p/WtNAIwo9p8A4TsMWzgJU?si=LEhOhNSucnVZgRkbcDUel9cx8Oi2",
   videoAssets: [
     {
-      name: "Executive Mobile Architecture Demo",
+      name: "Executive Mobile Architecture & Trading Venue Demo",
       filename: "FUCKYEAH.mov",
       duration: "95 seconds",
-      aspect: "720x1280",
+      aspect: "720x1280 (Mobile Portrait)",
       description: "Direct walk-through of the BYOND private trading venue, demonstrating title verification, non-custodial custody, and order-matching."
     },
     {
-      name: "OnliYou Tangible Settlement & Patent Finality",
+      name: "OnliYou Tangible Settlement & Patent Finality Walkthrough",
       filename: "IMG_0397.MP4",
       duration: "186 seconds",
-      aspect: "720x1280",
+      aspect: "720x1280 (Mobile Portrait)",
       description: "Complete technical demo of off-chain possession, single identifiable owner protocol, and instant settlement without public mempool slippage."
     }
   ],
@@ -100,32 +100,43 @@ export const LENDER_OBJECTIONS = [
 export const MASTER_PITCH_EMAIL = {
   firstLine: "$30M senior, first lien on a granted U.S. patent family independently valued at $340–460M (6.5–8.8% LTV). 48-month, 18-month IO, year-one interest reserved. $280M seller note junior. Close Dec 15. Teaser attached. 20 minutes on collateral and LTV.",
   subject: "CONFIDENTIAL // $30M Senior Secured Credit Facility — OnliBitcoin Granted U.S. Patent Estate (6.5%–8.8% LTV // $340–460M Valuation)",
-  generateBody: (recipientName: string, firmName: string, customAngle: string) => `Dear ${recipientName},
+  generateBody: (
+    recipientName: string, 
+    firmName: string, 
+    customAngle: string,
+    precedentDeal?: string,
+    precedentFitAnalysis?: string
+  ) => `Dear ${recipientName},
 
 $30M senior, first lien on a granted U.S. patent family independently valued at $340–460M (6.5–8.8% LTV). 48-month, 18-month IO, year-one interest reserved. $280M seller note junior. Close Dec 15. Teaser attached. 20 minutes on collateral and LTV.
 
-I am reaching out specifically to ${firmName} regarding Byond Holdings' $30 million senior secured acquisition facility. Given ${customAngle}, this opportunity sits directly within your credit parameters:
+I am reaching out specifically to ${firmName} regarding Byond Holdings' $30 million senior secured acquisition facility.${precedentDeal ? `
 
-KEY CREDIT HIGHLIGHTS:
-1. Senior Collateral & Perfected Lien: First-priority perfected security interest in the OnliBitcoin Patent Family (4 granted U.S. patents, 1 granting, 1 pending) providing off-chain tangible property rights and settlement finality for institutional Bitcoin.
-2. Independent Valuation & Ultra-Low LTV: Independently appraised by Teknos at $340M–$460M (September 3, 2026), yielding an exceptionally conservative 6.5%–8.8% appraised LTV.
-3. 2.8x Stressed Liquidation Coverage: Under an extreme 75% liquidation haircut to the $340M valuation floor (~$85M net), the $30M senior loan retains 2.8x cash coverage.
-4. Pre-Funded 12-Month Debt Service Reserve: $3.6M of facility proceeds is ring-fenced at closing into an interest reserve (12 months IO at 12% illustrative coupon). The borrower does not rely on early operating cash flow to service debt.
-5. Deep Subordination ($280M Junior Seller Note): The seller (The Onli Corporation) carries $280M of subordinated 5-year paper behind the senior facility. Senior debt accounts for only 10% of the $300M transaction value.
-6. Tenor & Runway: 48-month term with 18 months interest-only. No DSCR testing in Year 1; springing 1.25x covenant begins Month 13.
+PRECEDENT DEAL ALIGNMENT & STRUCTURAL FIT:
+We have tracked ${firmName}'s leadership across asset-backed credit structures, notably ${precedentDeal}. ${precedentFitAnalysis || `This facility mirrors that exact credit archetype: senior debt secured by a defensible patent estate with conservative LTV and pre-funded debt service.`}` : ` Given ${customAngle}, this facility sits directly within your target underwriting criteria.`}
 
-INTEGRATED DEMOS & MULTIMEDIA REVIEW:
-• Interactive Audio/Video Presentation & Architecture Walkthrough:
+INDEPENDENT PATENT VALUATION & COLLATERAL COVERAGE:
+1. Teknos Associates Independent Valuation: The OnliBitcoin Patent Family (4 granted U.S. patents, 1 granting, 1 pending) was independently appraised by Teknos Associates on September 3, 2026 at $340,000,000 to $460,000,000.
+2. Ultra-Low Appraised LTV (6.5% – 8.8%): A $30M senior facility against a $340M valuation floor produces an extraordinarily conservative 8.8% LTV (or 6.5% against the $460M ceiling).
+3. 2.8x Stressed Liquidation Coverage: Under an extreme 75% haircut to the $340M valuation floor (~$85M liquidation value), the $30M senior facility retains 2.8x full cash recovery coverage.
+4. $280M Subordinated Seller Note: The seller (The Onli Corporation) carries $280M of subordinated 5-year junior paper behind your senior position. Senior debt represents only 10% of total $300M transaction capital.
+5. Pre-Funded 12-Month Debt Service Reserve: Exactly $3.6M of facility proceeds is ring-fenced at closing into an interest reserve (12 months IO at 12% illustrative coupon). The credit does not rely on early marketplace operating cash flow to support debt service.
+6. Tenor & Covenants: 48-month term with 18 months interest-only. No DSCR testing during Year 1; springing 1.25x DSCR beginning Month 13.
+
+INTEGRATED DEMOS, VIDEO ENCLOSURES & AUDIO PRESENTATION:
+To review the technology, patent mechanics, and trading infrastructure in action, please access the following materials:
+• Interactive Audio/Video Presentation & Architecture Walkthrough (Dhryl Anton):
   https://samply.app/p/WtNAIwo9p8A4TsMWzgJU?si=LEhOhNSucnVZgRkbcDUel9cx8Oi2
-• Technical Execution & Settlement Demo (Video Walkthrough): FUCKYEAH.mov & IMG_0397.MP4
+• Enclosed Video 1 (FUCKYEAH.mov): 95-second executive demonstration of the BYOND private trading venue, non-custodial custody, and off-chain order flow.
+• Enclosed Video 2 (IMG_0397.MP4): 186-second deep-dive into OnliYou tangible Bitcoin possession, single identifiable owner protocol, and instant settlement finality.
 • Institutional Virtual Data Room: dealflow.onlibtc.com/investor
 
-ATTACHMENTS TRANSMITTED:
+TRANSACTION DOCUMENTS ATTACHED:
 1. BYOND_OnliBitcoin_Patent_Teaser.docx (Executive Credit Teaser & Metrics)
-2. BYOND_1Lender_Deal_Points_with_Objections.docx (Credit Committee Defense & Deal Terms)
-3. Teknos Independent Valuation Opinion (Sep 3, 2026)
+2. BYOND_1Lender_Deal_Points_with_Objections.docx (Credit Committee Defense Memo & Term Sheet)
+3. Teknos Independent Valuation Opinion (Dated September 3, 2026 — $340M to $460M)
 
-Target close is December 15, 2026. Are you available for a brief 20-minute call this week to review the collateral package and credit structure?
+Target close is December 15, 2026. Are you available for a brief 20-minute call this week to review the patent valuation, collateral package, and term sheet?
 
 Sincerely,
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Database, Send, AlertTriangle, ExternalLink, RefreshCw } from 'lucide-react';
+import { ShieldCheck, Database, Send, AlertTriangle, ExternalLink, RefreshCw, Layers } from 'lucide-react';
 import { DEAL_TERMS } from '../data/dealTerms';
 
 interface HeaderProps {
@@ -49,17 +49,6 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Navigation Tabs */}
           <div className="flex items-center space-x-1 sm:space-x-2">
             <button
-              onClick={() => setActiveTab('pipeline')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                activeTab === 'pipeline'
-                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
-                  : 'text-slate-400 hover:text-white hover:bg-slate-900'
-              }`}
-            >
-              Lender Directory ({totalCount})
-            </button>
-
-            <button
               onClick={() => setActiveTab('master-email')}
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center space-x-1.5 ${
                 activeTab === 'master-email'
@@ -69,6 +58,29 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <Send className="h-3.5 w-3.5" />
               <span>Master Email Draft</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('precedent-deals')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center space-x-1.5 ${
+                activeTab === 'precedent-deals'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                  : 'text-slate-400 hover:text-white hover:bg-slate-900'
+              }`}
+            >
+              <Layers className="h-3.5 w-3.5" />
+              <span>Precedent Comps</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('pipeline')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                activeTab === 'pipeline'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                  : 'text-slate-400 hover:text-white hover:bg-slate-900'
+              }`}
+            >
+              Lender Directory ({totalCount})
             </button>
 
             <button
@@ -90,7 +102,7 @@ export const Header: React.FC<HeaderProps> = ({
                   : 'text-slate-400 hover:text-white hover:bg-slate-900'
               }`}
             >
-              Credit Committee Defense
+              Objections
             </button>
 
             <button

@@ -8,10 +8,11 @@ import { ObjectionVault } from './components/ObjectionVault';
 import { CollateralVault } from './components/CollateralVault';
 import { BounceAuditor } from './components/BounceAuditor';
 import { MasterEmailDraftView } from './components/MasterEmailDraftView';
+import { PrecedentDealMatrix } from './components/PrecedentDealMatrix';
 import { INITIAL_LENDERS } from './data/lenders';
 import { DEAL_TERMS } from './data/dealTerms';
 import { LenderTarget, OutreachStatus, ActivityLogItem } from './types/crm';
-import { ShieldCheck, Download, ExternalLink } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export const App: React.FC = () => {
   const [lenders, setLenders] = useState<LenderTarget[]>(() => {
@@ -26,7 +27,7 @@ export const App: React.FC = () => {
     return INITIAL_LENDERS;
   });
 
-  const [activeTab, setActiveTab] = useState<string>('master-email'); // default to master-email draft per user request!
+  const [activeTab, setActiveTab] = useState<string>('master-email'); // default to master-email draft per user request
   const [selectedLender, setSelectedLender] = useState<LenderTarget | null>(null);
   const [composerLender, setComposerLender] = useState<LenderTarget | null>(null);
   const [activityLogs, setActivityLogs] = useState<ActivityLogItem[]>([]);
@@ -157,6 +158,13 @@ export const App: React.FC = () => {
           <MasterEmailDraftView
             lenders={lenders}
             onOpenComposerForTarget={(target) => setComposerLender(target)}
+          />
+        )}
+
+        {activeTab === 'precedent-deals' && (
+          <PrecedentDealMatrix
+            lenders={lenders}
+            onOpenComposer={(target) => setComposerLender(target)}
           />
         )}
 

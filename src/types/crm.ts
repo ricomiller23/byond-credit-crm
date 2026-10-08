@@ -28,6 +28,8 @@ export interface LenderTarget {
   whyTheyFit: string;
   howToWorkThem: string;
   pitchAngle: string;
+  precedentDeal?: string;
+  precedentFitAnalysis?: string;
   contacts: LenderContact[];
   status: OutreachStatus;
   lastContactedAt?: string;
