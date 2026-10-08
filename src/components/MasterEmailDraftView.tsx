@@ -153,7 +153,7 @@ export const MasterEmailDraftView: React.FC<MasterEmailDraftViewProps> = ({
                 <Video className="h-4 w-4" />
               </div>
               <div>
-                <div className="font-bold text-white text-xs">FUCKYEAH.mov</div>
+                <div className="font-bold text-white text-xs">Presentation 1.mov</div>
                 <div className="text-[10px] text-slate-400">95s Architecture Walkthrough</div>
               </div>
             </div>
@@ -164,7 +164,7 @@ export const MasterEmailDraftView: React.FC<MasterEmailDraftViewProps> = ({
                 <Video className="h-4 w-4" />
               </div>
               <div>
-                <div className="font-bold text-white text-xs">IMG_0397.MP4</div>
+                <div className="font-bold text-white text-xs">Presentation 2.mp4</div>
                 <div className="text-[10px] text-slate-400">186s OnliYou Tangible Settlement Demo</div>
               </div>
             </div>

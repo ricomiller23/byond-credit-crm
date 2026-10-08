@@ -27,14 +27,14 @@ export const DEAL_TERMS = {
   videoAssets: [
     {
       name: "Executive Mobile Architecture & Trading Venue Demo",
-      filename: "FUCKYEAH.mov",
+      filename: "Presentation 1.mov",
       duration: "95 seconds",
       aspect: "720x1280 (Mobile Portrait)",
       description: "Direct walk-through of the BYOND private trading venue, demonstrating title verification, non-custodial custody, and order-matching."
     },
     {
       name: "OnliYou Tangible Settlement & Patent Finality Walkthrough",
-      filename: "IMG_0397.MP4",
+      filename: "Presentation 2.mp4",
       duration: "186 seconds",
       aspect: "720x1280 (Mobile Portrait)",
       description: "Complete technical demo of off-chain possession, single identifiable owner protocol, and instant settlement without public mempool slippage."
@@ -127,8 +127,8 @@ INTEGRATED DEMOS, VIDEO ENCLOSURES & AUDIO PRESENTATION:
 To review the technology, patent mechanics, and trading infrastructure in action, please access the following materials:
 • Interactive Audio/Video Presentation & Architecture Walkthrough (Dhryl Anton):
   https://samply.app/p/WtNAIwo9p8A4TsMWzgJU?si=LEhOhNSucnVZgRkbcDUel9cx8Oi2
-• Enclosed Video 1 (FUCKYEAH.mov): 95-second executive demonstration of the BYOND private trading venue, non-custodial custody, and off-chain order flow.
-• Enclosed Video 2 (IMG_0397.MP4): 186-second deep-dive into OnliYou tangible Bitcoin possession, single identifiable owner protocol, and instant settlement finality.
+• Enclosed Video 1 (Presentation 1.mov): 95-second executive demonstration of the BYOND private trading venue, non-custodial custody, and off-chain order flow.
+• Enclosed Video 2 (Presentation 2.mp4): 186-second deep-dive into OnliYou tangible Bitcoin possession, single identifiable owner protocol, and instant settlement finality.
 • Institutional Virtual Data Room: dealflow.onlibtc.com/investor
 
 TRANSACTION DOCUMENTS ATTACHED:
@@ -136,7 +136,7 @@ TRANSACTION DOCUMENTS ATTACHED:
 2. BYOND_1Lender_Deal_Points_with_Objections.docx (Credit Committee Defense Memo & Term Sheet)
 3. Teknos Independent Valuation Opinion (Dated September 3, 2026 — $340M to $460M)
 
-Target close is December 15, 2026. Are you available for a brief 20-minute call this week to review the patent valuation, collateral package, and term sheet?
+Target close is December 15, 2026. Are you available for a brief 20-minute call next week to review the patent valuation, collateral package, and term sheet?
 
 Sincerely,
 

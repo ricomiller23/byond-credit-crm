@@ -140,12 +140,12 @@ export const CollateralVault: React.FC = () => {
               </span>
               <span className="text-[10px] font-mono text-slate-400">95s • 720x1280</span>
             </div>
-            <h4 className="font-bold text-white text-xs mb-1">FUCKYEAH.mov</h4>
+            <h4 className="font-bold text-white text-xs mb-1">Presentation 1.mov</h4>
             <p className="text-[11px] text-slate-400 mb-3">
               Executive demo of the BYOND private trading venue, non-custodial Bitcoin wallet, and order flow.
             </p>
             <div className="p-2 rounded bg-slate-900 border border-slate-800 text-[10px] font-mono text-slate-400 truncate">
-              Path: ~/Downloads/fuckyeah.mov
+              Path: ~/Downloads/Presentation 1.mov
             </div>
           </div>
 
@@ -157,12 +157,12 @@ export const CollateralVault: React.FC = () => {
               </span>
               <span className="text-[10px] font-mono text-slate-400">186s • 720x1280</span>
             </div>
-            <h4 className="font-bold text-white text-xs mb-1">IMG_0397.MP4</h4>
+            <h4 className="font-bold text-white text-xs mb-1">Presentation 2.mp4</h4>
             <p className="text-[11px] text-slate-400 mb-3">
               Technical demonstration of single-owner off-chain settlement finality and tangible possession.
             </p>
             <div className="p-2 rounded bg-slate-900 border border-slate-800 text-[10px] font-mono text-slate-400 truncate">
-              Path: ~/Downloads/IMG_0397.MP4
+              Path: ~/Downloads/Presentation 2.mp4
             </div>
           </div>
         </div>
