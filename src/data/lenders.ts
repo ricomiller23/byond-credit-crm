@@ -29,7 +29,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         isPrimary: false
       }
     ],
-    status: "Ready to Dispatch"
+    status: "Sent"
   },
   {
     id: "A2",
@@ -44,9 +44,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
     precedentFitAnalysis: "The OnliBitcoin patent family directly aligns with Aon's valuation and credit-enhancement models: an ultra-conservative 6.5%–8.8% LTV against the $340M–$460M Teknos appraisal, ideal for Aon's lending syndication partners and institutional fund partnerships (e.g. M&G Investments).",
     contacts: [
       {
-        name: "Lewis Lee",
+        name: "Aon IP Solutions Team",
         title: "Chief Executive Officer, Aon IP Solutions",
-        email: "lewis.lee@aon.com",
+        email: "intellectualproperty@aon.com",
         secondaryEmail: "ipsolutions@aon.com",
         phone: "(312) 381-1000",
         isPrimary: true
@@ -58,7 +58,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         isPrimary: false
       }
     ],
-    status: "Ready to Dispatch"
+    status: "Sent"
   },
   {
     id: "A3",
@@ -81,7 +81,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         isPrimary: true
       }
     ],
-    status: "Ready to Dispatch"
+    status: "Sent"
   },
   {
     id: "A4",
@@ -104,7 +104,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         isPrimary: true
       }
     ],
-    status: "Ready to Dispatch"
+    status: "Sent"
   },
   {
     id: "A5",
@@ -127,7 +127,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         isPrimary: true
       }
     ],
-    status: "Ready to Dispatch"
+    status: "Sent"
   },
 
   // ================= TIER B: VENTURE DEBT & TECH BDCs =================
@@ -152,12 +152,12 @@ export const INITIAL_LENDERS: LenderTarget[] = [
       },
       {
         name: "Christian Faloppa",
-        title: "Managing Director, Tech Lending",
+        title: "Executive Managing Director",
         email: "cfaloppa@htgc.com",
         isPrimary: false
       }
     ],
-    status: "Ready to Dispatch"
+    status: "Sent"
   },
   {
     id: "B7",
@@ -187,7 +187,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         isPrimary: false
       }
     ],
-    status: "Ready to Dispatch"
+    status: "Sent"
   },
   {
     id: "B8",
@@ -202,9 +202,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
     precedentFitAnalysis: "Fulfills Horizon's criteria for granted patent claims (4 granted U.S. patents), while the $3.6M pre-funded escrow reserve fully insulates debt service during the initial 12 months.",
     contacts: [
       {
-        name: "Gerald A. Michaud",
+        name: "Horizon Tech Finance Deal Desk",
         title: "President & Director",
-        email: "gmichaud@horizontechfinance.com",
+        email: "info@horizontechfinance.com",
         phone: "(860) 676-8654",
         isPrimary: true
       },
@@ -302,9 +302,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
     precedentFitAnalysis: "Matches Oxford's IP-secured underwriting standards with 6.5%–8.8% appraised LTV and $280M junior seller subordination.",
     contacts: [
       {
-        name: "Kevin Witmer",
+        name: "Austin Szafranski",
         title: "Senior Managing Director, Credit & Originating",
-        email: "kwitmer@oxfordfinance.com",
+        email: "aszafranski@oxfordfinance.com",
         phone: "(703) 519-4900",
         isPrimary: true
       }
@@ -346,9 +346,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
     precedentFitAnalysis: "Offers senior bank club syndication with high collateral coverage and conservative 8.8% LTV.",
     contacts: [
       {
-        name: "Peter Szekely",
+        name: "Grant Simon",
         title: "Executive Vice President & Head of TLS",
-        email: "pszekely@comerica.com",
+        email: "gsimon@comerica.com",
         phone: "(800) 521-1198",
         isPrimary: true
       }
@@ -368,9 +368,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
     precedentFitAnalysis: "Fits CIBC's fintech credit mandate with clean use of proceeds and pre-funded interest reserve.",
     contacts: [
       {
-        name: "Paul Fuellemann",
+        name: "Paul McKinlay",
         title: "Managing Director, Technology Lending",
-        email: "paul.fuellemann@cibc.com",
+        email: "paul.mckinlay@cibc.com",
         phone: "(416) 980-2222",
         isPrimary: true
       }
@@ -529,9 +529,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
     precedentFitAnalysis: "Local Arizona institutional engagement with deep knowledge of proprietary IP asset structures.",
     contacts: [
       {
-        name: "Jordan Bastable",
+        name: "Rob Wolfman",
         title: "Co-Founder & Managing Partner",
-        email: "jbastable@montagepartners.com",
+        email: "rwolfman@montagepartners.com",
         phone: "(480) 214-7220",
         isPrimary: true
       }
