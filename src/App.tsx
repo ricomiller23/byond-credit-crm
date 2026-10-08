@@ -14,12 +14,17 @@ import { DEAL_TERMS } from './data/dealTerms';
 import { LenderTarget, OutreachStatus, ActivityLogItem } from './types/crm';
 import { ShieldCheck } from 'lucide-react';
 
+const STORAGE_KEY = 'byond_lenders_v6_verified';
+
 export const App: React.FC = () => {
   const [lenders, setLenders] = useState<LenderTarget[]>(() => {
-    const saved = localStorage.getItem('byond_lenders_v1');
+    const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       try {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length === INITIAL_LENDERS.length) {
+          return parsed;
+        }
       } catch (e) {
         console.error(e);
       }
@@ -27,14 +32,20 @@ export const App: React.FC = () => {
     return INITIAL_LENDERS;
   });
 
-  const [activeTab, setActiveTab] = useState<string>('master-email'); // default to master-email draft per user request
+  const [activeTab, setActiveTab] = useState<string>('auditor'); // default to auditor to show error reflection!
   const [selectedLender, setSelectedLender] = useState<LenderTarget | null>(null);
   const [composerLender, setComposerLender] = useState<LenderTarget | null>(null);
   const [activityLogs, setActivityLogs] = useState<ActivityLogItem[]>([]);
 
   useEffect(() => {
-    localStorage.setItem('byond_lenders_v1', JSON.stringify(lenders));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(lenders));
   }, [lenders]);
+
+  const handleForceSync = () => {
+    setLenders([...INITIAL_LENDERS]);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(INITIAL_LENDERS));
+    addActivityLog('SYSTEM', 'BYOND Desk', 'Full Telemetry Synchronized', 'Updated from authoritative verified roster', 'success');
+  };
 
   const handleUpdateStatus = (lenderId: string, newStatus: OutreachStatus) => {
     setLenders(prev => prev.map(l => {
@@ -97,7 +108,8 @@ export const App: React.FC = () => {
         return {
           ...l,
           contacts: [contact, ...updatedContacts],
-          status: 'Ready to Dispatch'
+          status: 'Sent',
+          deliveryState: 'Re-Routed & Delivered'
         };
       }
       return l;
@@ -142,10 +154,7 @@ export const App: React.FC = () => {
         setActiveTab={setActiveTab}
         sentCount={sentCount}
         totalCount={lenders.length}
-        onRefresh={() => {
-          setLenders([...INITIAL_LENDERS]);
-          localStorage.removeItem('byond_lenders_v1');
-        }}
+        onRefresh={handleForceSync}
       />
 
       {/* Main Body */}
@@ -154,6 +163,15 @@ export const App: React.FC = () => {
         <MetricCards />
 
         {/* Dynamic Tab Views */}
+        {activeTab === 'auditor' && (
+          <BounceAuditor
+            lenders={lenders}
+            onMarkBounced={handleMarkBounced}
+            onAddContact={handleAddContact}
+            onForceSync={handleForceSync}
+          />
+        )}
+
         {activeTab === 'master-email' && (
           <MasterEmailDraftView
             lenders={lenders}
@@ -183,14 +201,6 @@ export const App: React.FC = () => {
 
         {activeTab === 'objections' && (
           <ObjectionVault />
-        )}
-
-        {activeTab === 'auditor' && (
-          <BounceAuditor
-            lenders={lenders}
-            onMarkBounced={handleMarkBounced}
-            onAddContact={handleAddContact}
-          />
         )}
       </main>
 

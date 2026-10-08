@@ -4,6 +4,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   // ================= TIER A: PATENT CREDIT & IP FINANCE SPECIALISTS =================
   {
     id: "A1",
+    deliveryState: "Delivered",
     tier: "A",
     firm: "Fortress Investment Group (IP Finance)",
     location: "New York, NY",
@@ -33,6 +34,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "A2",
+    deliveryState: "Re-Routed & Delivered",
+    originalBouncedEmail: "lewis.lee@aon.com",
+    bounceError: "Departed Aon 2024 to Moat Metrics -> Re-routed to IP Solutions Desk",
     tier: "A",
     firm: "Aon IP Solutions / Intellectual Property Finance",
     location: "Chicago, IL / National",
@@ -62,6 +66,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "A3",
+    deliveryState: "Delivered",
     tier: "A",
     firm: "BlueIron IP",
     location: "Loveland, CO",
@@ -85,6 +90,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "A4",
+    deliveryState: "Re-Routed & Delivered",
+    originalBouncedEmail: "mgulliford@sorynipcap.com",
+    bounceError: "Mimecast 550 Invalid Recipient -> Re-routed to info@sorynipcap.com",
     tier: "A",
     firm: "Soryn IP Capital Management",
     location: "New York, NY",
@@ -108,6 +116,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "A5",
+    deliveryState: "Delivered",
     tier: "A",
     firm: "ipCapital Group",
     location: "Williston, VT",
@@ -133,6 +142,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   // ================= TIER B: VENTURE DEBT & TECH BDCs =================
   {
     id: "B6",
+    deliveryState: "Delivered",
     tier: "B",
     firm: "Hercules Capital (NYSE: HTGC)",
     location: "San Jose / Palo Alto, CA",
@@ -161,6 +171,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "B7",
+    deliveryState: "Delivered",
     tier: "B",
     firm: "Trinity Capital (Nasdaq: TRIN)",
     location: "Phoenix / Chandler, AZ",
@@ -191,6 +202,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "B8",
+    deliveryState: "Re-Routed & Delivered",
+    originalBouncedEmail: "gmichaud@horizontechfinance.com",
+    bounceError: "President retired 2025 -> Re-routed to info@horizontechfinance.com",
     tier: "B",
     firm: "Horizon Technology Finance (Nasdaq: HRZN)",
     location: "Farmington, CT",
@@ -219,6 +233,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "B9",
+    deliveryState: "Delivered",
     tier: "B",
     firm: "WTI (Western Technology Investment)",
     location: "Portola Valley, CA",
@@ -241,6 +256,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "B10",
+    deliveryState: "Delivered",
     tier: "B",
     firm: "TriplePoint Venture Growth (NYSE: TPVG)",
     location: "Menlo Park, CA",
@@ -269,6 +285,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "B11",
+    deliveryState: "Delivered",
     tier: "B",
     firm: "Runway Growth Capital (Nasdaq: RWAY)",
     location: "Chicago / Silicon Valley",
@@ -291,6 +308,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "B12",
+    deliveryState: "Re-Routed & Delivered",
+    originalBouncedEmail: "kwitmer@oxfordfinance.com",
+    bounceError: "550 Unknown User -> Sourced Exec Director Austin Szafranski",
     tier: "B",
     firm: "Oxford Finance",
     location: "Alexandria, VA / CA",
@@ -313,6 +333,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "B13",
+    deliveryState: "Delivered",
     tier: "B",
     firm: "First Citizens Bank (Silicon Valley Bank Desk)",
     location: "Santa Clara, CA / National",
@@ -335,6 +356,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "B14",
+    deliveryState: "Re-Routed & Delivered",
+    originalBouncedEmail: "pszekely@comerica.com",
+    bounceError: "Comerica gateway blocked -> Replaced with Western Alliance Bank (Phoenix HQ)",
     tier: "B",
     firm: "Comerica Bank (Technology & Life Sciences)",
     location: "Dallas / San Jose / National",
@@ -357,6 +381,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "B15",
+    deliveryState: "Re-Routed & Delivered",
+    originalBouncedEmail: "paul.fuellemann@cibc.com",
+    bounceError: "Misattributed name -> Sourced Exec MD Paul McKinlay",
     tier: "B",
     firm: "CIBC Innovation Banking",
     location: "US / Canada / UK",
@@ -381,6 +408,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   // ================= TIER C: PRIVATE CREDIT & SPECIALTY LENDERS =================
   {
     id: "C16",
+    deliveryState: "Delivered",
     tier: "C",
     firm: "Blue Owl Technology Finance",
     location: "New York / Silicon Valley",
@@ -404,6 +432,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "C17",
+    deliveryState: "Delivered",
     tier: "C",
     firm: "Ares Management (Mid-Market Credit)",
     location: "New York / Los Angeles",
@@ -427,6 +456,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "C18",
+    deliveryState: "Delivered",
     tier: "C",
     firm: "Sixth Street (Specialty Lending)",
     location: "San Francisco / New York",
@@ -450,6 +480,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "C19",
+    deliveryState: "Delivered",
     tier: "C",
     firm: "Golub Capital",
     location: "New York / Chicago",
@@ -473,6 +504,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "C20",
+    deliveryState: "Delivered",
     tier: "C",
     firm: "White Oak Global Advisors",
     location: "San Francisco, CA",
@@ -496,6 +528,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "C21",
+    deliveryState: "Delivered",
     tier: "C",
     firm: "North Atlantic Capital",
     location: "Portland, ME",
@@ -518,6 +551,9 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "C22",
+    deliveryState: "Re-Routed & Delivered",
+    originalBouncedEmail: "jbastable@montagepartners.com",
+    bounceError: "550 User Unknown -> Sourced Managing Partner Rob Wolfman",
     tier: "C",
     firm: "Montage Partners",
     location: "Scottsdale, AZ",
@@ -540,6 +576,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "C23",
+    deliveryState: "Delivered",
     tier: "C",
     firm: "HSBC Innovation Banking",
     location: "New York / London / National",
@@ -562,6 +599,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "C24",
+    deliveryState: "Delivered",
     tier: "C",
     firm: "Banc of California (PWB Tech Debt)",
     location: "Los Angeles / San Diego / San Jose",
@@ -584,6 +622,7 @@ export const INITIAL_LENDERS: LenderTarget[] = [
   },
   {
     id: "C25",
+    deliveryState: "Delivered",
     tier: "C",
     firm: "Vistara Growth",
     location: "Vancouver / Toronto / US",

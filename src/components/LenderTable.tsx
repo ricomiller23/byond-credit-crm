@@ -54,6 +54,29 @@ export const LenderTable: React.FC<LenderTableProps> = ({
     }
   };
 
+  const getDeliveryBadge = (lender: LenderTarget) => {
+    if (lender.deliveryState === 'Re-Routed & Delivered') {
+      return (
+        <span 
+          title={`Initial address bounced (${lender.originalBouncedEmail}). Re-routed to active contact.`}
+          className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30 flex items-center justify-center space-x-1"
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-amber-400"></span>
+          <span>Re-Routed & Sent</span>
+        </span>
+      );
+    }
+    if (lender.status === 'Sent') {
+      return (
+        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center space-x-1">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+          <span>Sent</span>
+        </span>
+      );
+    }
+    return getStatusBadge(lender.status);
+  };
+
   const getStatusBadge = (status: OutreachStatus) => {
     switch (status) {
       case 'Ready to Dispatch':
@@ -202,7 +225,7 @@ export const LenderTable: React.FC<LenderTableProps> = ({
                     </td>
 
                     <td className="py-3.5 px-4 text-center whitespace-nowrap">
-                      {getStatusBadge(lender.status)}
+                      {getDeliveryBadge(lender)}
                     </td>
 
                     <td className="py-3.5 px-4 text-right whitespace-nowrap">

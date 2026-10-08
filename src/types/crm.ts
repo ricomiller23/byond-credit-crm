@@ -36,6 +36,9 @@ export interface LenderTarget {
   notes?: string;
   customSubject?: string;
   customBody?: string;
+  deliveryState?: 'Delivered' | 'Bounced' | 'Re-Routed & Delivered';
+  originalBouncedEmail?: string;
+  bounceError?: string;
 }
 
 export interface ActivityLogItem {
