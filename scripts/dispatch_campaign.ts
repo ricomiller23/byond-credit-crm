@@ -16,8 +16,10 @@ interface DispatchResult {
   timestamp: string;
 }
 
-const teaserPath = '/Users/ericmiller/Downloads/BYOND_OnliBitcoin_Patent_Teaser.docx';
-const objectionsPath = '/Users/ericmiller/Downloads/BYOND_1Lender_Deal_Points_with_Objections.docx';
+const patentSummaryDoc = '/Users/ericmiller/Downloads/BYOND_OnliBitcoin_Patent.docx';
+const dealPointsDoc = '/Users/ericmiller/Downloads/BYOND_1Lender_Deal_Points.docx';
+const video1Path = '/Users/ericmiller/.gemini/antigravity-ide/scratch/byond-credit-crm/public/videos/Presentation_1.mp4';
+const video2Path = '/Users/ericmiller/.gemini/antigravity-ide/scratch/byond-credit-crm/public/videos/Presentation_2.mp4';
 
 function sendViaAppleMail(
   toEmail: string,
@@ -56,12 +58,14 @@ function sleep(ms: number) {
 
 async function runDispatch() {
   console.log(`======================================================================`);
-  console.log(`BYOND HOLDINGS LLC — $30M SENIOR FACILITY CREDIT SYNDICATION DISPATCH`);
+  console.log(`BYOND HOLDINGS LLC — 4-ASSET INSTITUTIONAL OUTBOUND SYNDICATION DISPATCH`);
   console.log(`======================================================================`);
   console.log(`Sender: Eric Miller <ricomiller@icloud.com>`);
   console.log(`Total Targets: ${INITIAL_LENDERS.length}`);
-  console.log(`Teaser Attachment: ${teaserPath} (${fs.existsSync(teaserPath) ? 'EXISTS' : 'MISSING'})`);
-  console.log(`Defense Memo Attachment: ${objectionsPath} (${fs.existsSync(objectionsPath) ? 'EXISTS' : 'MISSING'})`);
+  console.log(`Doc 1 (Patent Summary): ${patentSummaryDoc} (${fs.existsSync(patentSummaryDoc) ? 'EXISTS' : 'MISSING'})`);
+  console.log(`Doc 2 (Deal Points): ${dealPointsDoc} (${fs.existsSync(dealPointsDoc) ? 'EXISTS' : 'MISSING'})`);
+  console.log(`Video 1 (Venue & Custody): ${video1Path} (${fs.existsSync(video1Path) ? 'EXISTS' : 'MISSING'})`);
+  console.log(`Video 2 (Tangible Possession): ${video2Path} (${fs.existsSync(video2Path) ? 'EXISTS' : 'MISSING'})`);
   console.log(`Starting dispatch sequence...\n`);
 
   const results: DispatchResult[] = [];
@@ -87,13 +91,13 @@ async function runDispatch() {
       primaryContact.email,
       subject,
       body,
-      [teaserPath, objectionsPath]
+      [patentSummaryDoc, dealPointsDoc, video1Path, video2Path]
     );
 
     const now = new Date().toISOString();
 
     if (res.success) {
-      console.log(`✓ SENT`);
+      console.log(`✓ SENT (4 Attachments + Links)`);
       sentCount++;
       results.push({
         id: lender.id,
@@ -122,7 +126,7 @@ async function runDispatch() {
     }
 
     if (i < INITIAL_LENDERS.length - 1) {
-      sleep(1800); // 1.8 second delay between sends for graceful Apple Mail queuing
+      sleep(1800);
     }
   }
 
@@ -140,10 +144,14 @@ async function runDispatch() {
 **Total Recipients:** ${results.length}  
 **Successful Transmissions:** ${sentCount}  
 **Failed Transmissions:** ${failedCount}  
-**Enclosed Collateral:**
-- Executive Teaser: \`BYOND_OnliBitcoin_Patent_Teaser.docx\`
-- Defense & Objections Memo: \`BYOND_1Lender_Deal_Points_with_Objections.docx\`
-- Video Presentations: \`Presentation 1.mov\` & \`Presentation 2.mp4\`
+**Enclosed Collateral Attached Directly to Email:**
+1. \`BYOND_OnliBitcoin_Patent.docx\` (Executive Credit Summary & Metrics)
+2. \`BYOND_1Lender_Deal_Points.docx\` (Credit Committee Defense Memo & Term Sheet)
+3. \`Presentation_1.mp4\` (95s Trading Venue & Custody Video Enclosure — 10 MB)
+4. \`Presentation_2.mp4\` (186s Tangible Possession & Settlement Video Enclosure — 9.7 MB)
+**Cloud Streaming & Data Room Enclosures:**
+- Video 1 Direct Stream: \`https://byond-credit-crm.vercel.app/videos/Presentation_1.mp4\`
+- Video 2 Direct Stream: \`https://byond-credit-crm.vercel.app/videos/Presentation_2.mp4\`
 - Interactive Audio Presentation: \`https://samply.app/p/WtNAIwo9p8A4TsMWzgJU?si=LEhOhNSucnVZgRkbcDUel9cx8Oi2\`
 - Live Syndication Terminal: [https://byond-credit-crm.vercel.app](https://byond-credit-crm.vercel.app)
 
@@ -164,9 +172,6 @@ async function runDispatch() {
 
   fs.writeFileSync(reportPath, md, 'utf8');
   console.log(`✓ Executive dispatch report exported to: ${reportPath}`);
-
-  // Write JSON state to scratch for CRM update
-  fs.writeFileSync('/tmp/byond_dispatch_results.json', JSON.stringify(results, null, 2), 'utf8');
 }
 
 runDispatch();
