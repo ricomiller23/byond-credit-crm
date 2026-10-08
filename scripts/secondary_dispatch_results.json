@@ -1,0 +1,206 @@
+{
+  "sentCount": 31,
+  "failCount": 2,
+  "total": 33,
+  "timestamp": "2026-10-08T13:44:34.542Z",
+  "results": [
+    {
+      "name": "James O'Brien",
+      "firm": "Fortress Investment Group (IP Finance)",
+      "email": "jobrien@fortress.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Ron Kundich",
+      "firm": "Trinity Capital (Nasdaq: TRIN)",
+      "email": "rkundich@trincapinvestment.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Sajal Srivastava",
+      "firm": "TriplePoint Venture Growth (NYSE: TPVG)",
+      "email": "ssrivastava@triplepointcapital.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Seth Meyer",
+      "firm": "Hercules Capital (NYSE: HTGC)",
+      "email": "smeyer@htgc.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Kelly McGowan",
+      "firm": "Montage Partners",
+      "email": "kmcgowan@montagepartners.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Kevin Harbour",
+      "firm": "Oxford Finance",
+      "email": "kharbour@oxfordfinance.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Noah Shipman",
+      "firm": "Vistara Growth",
+      "email": "noah@vistaragrowth.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Greg Greifeld",
+      "firm": "Runway Growth Capital (Nasdaq: RWAY)",
+      "email": "ggreifeld@runwaygrowth.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Jeff Brown",
+      "firm": "Western Alliance Bank (Innovation Banking)",
+      "email": "jbrown@westernalliancebank.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "David Wanek",
+      "firm": "WTI (Western Technology Investment)",
+      "email": "dwanek@westerntech.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Amy Olah",
+      "firm": "CIBC Innovation Banking",
+      "email": "amy.olah@cibc.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Dan Trolio",
+      "firm": "Horizon Technology Finance",
+      "email": "dtrolio@horizontechfinance.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Mark Affolter",
+      "firm": "Ares Management (Mid-Market Credit)",
+      "email": "maffolter@aresmgmt.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Michael Horvath",
+      "firm": "Sixth Street (Specialty Lending)",
+      "email": "mhorvath@sixthstreet.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Gregory Cashman",
+      "firm": "Golub Capital",
+      "email": "gcashman@golubcapital.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Tom Otte",
+      "firm": "White Oak Global Advisors",
+      "email": "totte@whiteoaksf.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Mark H. Morris",
+      "firm": "North Atlantic Capital",
+      "email": "mmorris@northatlanticcapital.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Katherine Andersen",
+      "firm": "HSBC Innovation Banking",
+      "email": "katherine.andersen@us.hsbc.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Scott Peters",
+      "firm": "Banc of California (PWB Tech Debt)",
+      "email": "scott.peters@bancofcal.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "General Deal Advisory Desk",
+      "firm": "ipCapital Group",
+      "email": "info@ipcg.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Fortress IP Finance Group",
+      "firm": "Fortress Investment Group (IP Finance)",
+      "email": "privatewealth@fortress.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Brian Hinman",
+      "firm": "Aon IP Solutions / Intellectual Property Finance",
+      "email": "brian.hinman@aon.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Aon IP Solutions Team",
+      "firm": "Aon IP Solutions / Intellectual Property Finance",
+      "email": "ipsolutions@aon.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Russ Krajec",
+      "firm": "BlueIron IP",
+      "email": "russ@blueironip.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Christian Faloppa",
+      "firm": "Hercules Capital (NYSE: HTGC)",
+      "email": "cfaloppa@htgc.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Kyle Brown",
+      "firm": "Trinity Capital (Nasdaq: TRIN)",
+      "email": "kbrown@trinitycap.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Ron Kundich",
+      "firm": "Trinity Capital (Nasdaq: TRIN)",
+      "email": "rkundich@trinitycap.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Robert D. Pomeroy, Jr.",
+      "firm": "Horizon Technology Finance (Nasdaq: HRZN)",
+      "email": "rpomeroy@horizontechfinance.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Blue Owl Tech Credit Team",
+      "firm": "Blue Owl Technology Finance",
+      "email": "techcredit@blueowl.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Ares Credit IR Desk",
+      "firm": "Ares Management (Mid-Market Credit)",
+      "email": "creditir@aresmgmt.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Sixth Street Credit Team",
+      "firm": "Sixth Street (Specialty Lending)",
+      "email": "info@sixthstreet.com",
+      "status": "Delivered"
+    },
+    {
+      "name": "Golub Tech Lending Team",
+      "firm": "Golub Capital",
+      "email": "info@golubcapital.com",
+      "status": "Failed"
+    },
+    {
+      "name": "White Oak Specialty Lending Desk",
+      "firm": "White Oak Global Advisors",
+      "email": "info@whiteoaksf.com",
+      "status": "Failed"
+    }
+  ]
+}

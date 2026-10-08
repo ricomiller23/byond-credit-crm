@@ -14,7 +14,7 @@ import { DEAL_TERMS } from './data/dealTerms';
 import { LenderTarget, OutreachStatus, ActivityLogItem } from './types/crm';
 import { ShieldCheck } from 'lucide-react';
 
-const STORAGE_KEY = 'byond_lenders_v6_verified';
+const STORAGE_KEY = 'byond_lenders_v7_secondary';
 
 export const App: React.FC = () => {
   const [lenders, setLenders] = useState<LenderTarget[]>(() => {

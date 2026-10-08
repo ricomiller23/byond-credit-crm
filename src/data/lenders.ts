@@ -165,8 +165,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         title: "Executive Managing Director",
         email: "cfaloppa@htgc.com",
         isPrimary: false
-      }
-    ],
+      },
+      {
+        name: "Seth Meyer",
+        title: "Chief Financial Officer & Senior Managing Director",
+        email: "smeyer@htgc.com",
+        isPrimary: false
+      }],
     status: "Sent"
   },
   {
@@ -216,15 +221,21 @@ export const INITIAL_LENDERS: LenderTarget[] = [
     precedentFitAnalysis: "Fulfills Horizon's criteria for granted patent claims (4 granted U.S. patents), while the $3.6M pre-funded escrow reserve fully insulates debt service during the initial 12 months.",
     contacts: [
       {
-        name: "Horizon Tech Finance Deal Desk",
-        title: "President & Director",
-        email: "info@horizontechfinance.com",
+        name: "Mike Balkin",
+        title: "Chief Executive Officer",
+        email: "mbalkin@horizontechfinance.com",
         phone: "(860) 676-8654",
         isPrimary: true
       },
       {
+        name: "Dan Trolio",
+        title: "EVP & Chief Financial Officer",
+        email: "dtrolio@horizontechfinance.com",
+        isPrimary: false
+      },
+      {
         name: "Robert D. Pomeroy, Jr.",
-        title: "Chief Executive Officer & Chairman",
+        title: "Chairman of the Board (Retired CEO)",
         email: "rpomeroy@horizontechfinance.com",
         isPrimary: false
       }
@@ -250,8 +261,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         email: "mwerdegar@westerntech.com",
         phone: "(650) 854-8833",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "David Wanek",
+        title: "Managing Director",
+        email: "dwanek@westerntech.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
   {
@@ -302,8 +318,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         email: "dspreng@runwaygrowth.com",
         phone: "(312) 281-6270",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Greg Greifeld",
+        title: "Managing Director & Deputy CIO",
+        email: "ggreifeld@runwaygrowth.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
   {
@@ -327,8 +348,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         email: "aszafranski@oxfordfinance.com",
         phone: "(703) 519-4900",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Kevin Harbour",
+        title: "Senior Managing Director",
+        email: "kharbour@oxfordfinance.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
   {
@@ -375,8 +401,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         email: "gsimon@comerica.com",
         phone: "(800) 521-1198",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Jeff Brown",
+        title: "Managing Director, Innovation Banking",
+        email: "jbrown@westernalliancebank.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
   {
@@ -400,8 +431,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         email: "paul.mckinlay@cibc.com",
         phone: "(416) 980-2222",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Amy Olah",
+        title: "Managing Director",
+        email: "amy.olah@cibc.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
 
@@ -450,8 +486,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         secondaryEmail: "creditir@aresmgmt.com",
         phone: "(212) 750-7300",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Mark Affolter",
+        title: "Partner & Co-Head of US Direct Lending",
+        email: "maffolter@aresmgmt.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
   {
@@ -498,8 +539,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         secondaryEmail: "info@golubcapital.com",
         phone: "(212) 750-6060",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Gregory Cashman",
+        title: "Senior Managing Director",
+        email: "gcashman@golubcapital.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
   {
@@ -522,8 +568,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         secondaryEmail: "info@whiteoaksf.com",
         phone: "(415) 644-4100",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Tom Otte",
+        title: "Partner & Head of Specialty Lending",
+        email: "totte@whiteoaksf.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
   {
@@ -570,8 +621,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         email: "rwolfman@montagepartners.com",
         phone: "(480) 214-7220",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Kelly McGowan",
+        title: "Manager, Deal Origination",
+        email: "kmcgowan@montagepartners.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
   {
@@ -593,8 +649,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         email: "david.sabow@us.hsbc.com",
         phone: "(212) 525-5000",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Katherine Andersen",
+        title: "Head of US Tech & Life Sciences",
+        email: "katherine.andersen@us.hsbc.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
   {
@@ -616,8 +677,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         email: "mark.hughes@bancofcal.com",
         phone: "(855) 361-2262",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Scott Peters",
+        title: "Managing Director, Venture Banking",
+        email: "scott.peters@bancofcal.com",
+        isPrimary: false
+      }],
     status: "Queued"
   },
   {
@@ -639,8 +705,13 @@ export const INITIAL_LENDERS: LenderTarget[] = [
         email: "randy@vistaragrowth.com",
         phone: "(604) 637-2160",
         isPrimary: true
-      }
-    ],
+      },
+      {
+        name: "Noah Shipman",
+        title: "Partner",
+        email: "noah@vistaragrowth.com",
+        isPrimary: false
+      }],
     status: "Queued"
   }
 ];
