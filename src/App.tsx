@@ -9,12 +9,14 @@ import { CollateralVault } from './components/CollateralVault';
 import { BounceAuditor } from './components/BounceAuditor';
 import { MasterEmailDraftView } from './components/MasterEmailDraftView';
 import { PrecedentDealMatrix } from './components/PrecedentDealMatrix';
+import { CrmPipelineView } from './components/CrmPipelineView';
+import { LogCallModal } from './components/LogCallModal';
 import { INITIAL_LENDERS } from './data/lenders';
 import { DEAL_TERMS } from './data/dealTerms';
-import { LenderTarget, OutreachStatus, ActivityLogItem } from './types/crm';
+import { LenderTarget, OutreachStatus, OrderFlowStage, ActivityLogItem, LenderContact, CrmInteraction } from './types/crm';
 import { ShieldCheck } from 'lucide-react';
 
-const STORAGE_KEY = 'byond_lenders_v7_secondary';
+const STORAGE_KEY = 'byond_lenders_v8_orderflow';
 
 export const App: React.FC = () => {
   const [lenders, setLenders] = useState<LenderTarget[]>(() => {
@@ -32,9 +34,11 @@ export const App: React.FC = () => {
     return INITIAL_LENDERS;
   });
 
-  const [activeTab, setActiveTab] = useState<string>('auditor'); // default to auditor to show error reflection!
+  const [activeTab, setActiveTab] = useState<string>('orderflow'); // Default to Order Flow CRM
   const [selectedLender, setSelectedLender] = useState<LenderTarget | null>(null);
   const [composerLender, setComposerLender] = useState<LenderTarget | null>(null);
+  const [logCallTarget, setLogCallTarget] = useState<LenderTarget | null>(null);
+  const [logCallContact, setLogCallContact] = useState<LenderContact | null>(null);
   const [activityLogs, setActivityLogs] = useState<ActivityLogItem[]>([]);
 
   useEffect(() => {
@@ -61,6 +65,79 @@ export const App: React.FC = () => {
 
     const firm = lenders.find(l => l.id === lenderId)?.firm || lenderId;
     addActivityLog(lenderId, firm, `Status updated to ${newStatus}`, `Updated status in pipeline CRM`, 'info');
+  };
+
+  const handleUpdateStage = (lenderId: string, stage: OrderFlowStage) => {
+    setLenders(prev => prev.map(l => {
+      if (l.id === lenderId) {
+        const newInteraction: CrmInteraction = {
+          id: `stage-${Date.now()}`,
+          date: new Date().toLocaleString(),
+          type: 'note',
+          contactName: l.contacts[0]?.name || 'Desk',
+          outcome: `Moved to ${stage.replace('_', ' ').toUpperCase()}`,
+          notes: `Stage transitioned in Order Flow Pipeline.`
+        };
+        return {
+          ...l,
+          orderFlowStage: stage,
+          interactions: [newInteraction, ...(l.interactions || [])]
+        };
+      }
+      return l;
+    }));
+
+    const firm = lenders.find(l => l.id === lenderId)?.firm || lenderId;
+    addActivityLog(lenderId, firm, `Order Flow Stage: ${stage}`, `Updated pipeline stage`, 'info');
+  };
+
+  const handleOpenLogCall = (lender: LenderTarget, contact?: LenderContact) => {
+    setLogCallTarget(lender);
+    setLogCallContact(contact || null);
+  };
+
+  const handleLogCall = (
+    lenderId: string,
+    callDetails: {
+      contactName: string;
+      outcome: string;
+      notes: string;
+      nextFollowUpDate?: string;
+      suggestedStage?: OrderFlowStage;
+    }
+  ) => {
+    setLenders(prev => prev.map(l => {
+      if (l.id === lenderId) {
+        const newInteraction: CrmInteraction = {
+          id: `int-${Date.now()}`,
+          date: new Date().toLocaleString(),
+          type: callDetails.outcome.toLowerCase().includes('email') ? 'email' : 'call',
+          contactName: callDetails.contactName,
+          outcome: callDetails.outcome,
+          notes: callDetails.notes,
+          nextFollowUpDate: callDetails.nextFollowUpDate
+        };
+
+        const updatedStage = callDetails.suggestedStage || l.orderFlowStage || 'in_dialogue';
+
+        return {
+          ...l,
+          orderFlowStage: updatedStage,
+          notes: callDetails.notes,
+          interactions: [newInteraction, ...(l.interactions || [])]
+        };
+      }
+      return l;
+    }));
+
+    const firm = lenders.find(l => l.id === lenderId)?.firm || lenderId;
+    addActivityLog(
+      lenderId,
+      firm,
+      `Call / Note Logged: ${callDetails.outcome}`,
+      `${callDetails.contactName}: ${callDetails.notes.substring(0, 50)}...`,
+      'success'
+    );
   };
 
   const handleSaveNotes = (lenderId: string, notes: string) => {
@@ -163,6 +240,25 @@ export const App: React.FC = () => {
         <MetricCards />
 
         {/* Dynamic Tab Views */}
+        {activeTab === 'orderflow' && (
+          <CrmPipelineView
+            lenders={lenders}
+            onOpenDrawer={(target) => setSelectedLender(target)}
+            onOpenEmailComposer={(target) => setComposerLender(target)}
+            onOpenLogCall={handleOpenLogCall}
+            onUpdateStage={handleUpdateStage}
+          />
+        )}
+
+        {activeTab === 'pipeline' && (
+          <LenderTable
+            lenders={lenders}
+            onSelectLender={(target) => setSelectedLender(target)}
+            onOpenComposer={(target) => setComposerLender(target)}
+            onUpdateStatus={handleUpdateStatus}
+          />
+        )}
+
         {activeTab === 'auditor' && (
           <BounceAuditor
             lenders={lenders}
@@ -186,15 +282,6 @@ export const App: React.FC = () => {
           />
         )}
 
-        {activeTab === 'pipeline' && (
-          <LenderTable
-            lenders={lenders}
-            onSelectLender={(target) => setSelectedLender(target)}
-            onOpenComposer={(target) => setComposerLender(target)}
-            onUpdateStatus={handleUpdateStatus}
-          />
-        )}
-
         {activeTab === 'collateral' && (
           <CollateralVault />
         )}
@@ -212,6 +299,8 @@ export const App: React.FC = () => {
           onOpenComposer={(target) => setComposerLender(target)}
           onUpdateStatus={handleUpdateStatus}
           onSaveNotes={handleSaveNotes}
+          onOpenLogCall={handleOpenLogCall}
+          onUpdateOrderFlowStage={handleUpdateStage}
         />
       )}
 
@@ -220,6 +309,19 @@ export const App: React.FC = () => {
           lender={composerLender}
           onClose={() => setComposerLender(null)}
           onLogSend={handleLogSend}
+        />
+      )}
+
+      {logCallTarget && (
+        <LogCallModal
+          isOpen={!!logCallTarget}
+          onClose={() => {
+            setLogCallTarget(null);
+            setLogCallContact(null);
+          }}
+          target={logCallTarget}
+          initialContact={logCallContact}
+          onLogCall={handleLogCall}
         />
       )}
 

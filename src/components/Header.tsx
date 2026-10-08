@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Database, Send, AlertTriangle, ExternalLink, RefreshCw, Layers } from 'lucide-react';
+import { ShieldCheck, Database, Send, AlertTriangle, ExternalLink, RefreshCw, Layers, Kanban } from 'lucide-react';
 import { DEAL_TERMS } from '../data/dealTerms';
 
 interface HeaderProps {
@@ -47,7 +47,30 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           {/* Navigation Tabs */}
-          <div className="flex items-center space-x-1 sm:space-x-2">
+          <div className="flex items-center space-x-1 sm:space-x-1.5 overflow-x-auto py-2">
+            <button
+              onClick={() => setActiveTab('orderflow')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1.5 ${
+                activeTab === 'orderflow'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                  : 'text-indigo-400 hover:text-white hover:bg-slate-900 border border-indigo-500/30 bg-indigo-500/10'
+              }`}
+            >
+              <Kanban className="h-3.5 w-3.5" />
+              <span>Order Flow CRM</span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab('pipeline')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                activeTab === 'pipeline'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                  : 'text-slate-400 hover:text-white hover:bg-slate-900'
+              }`}
+            >
+              Lender Roster ({totalCount})
+            </button>
+
             <button
               onClick={() => setActiveTab('master-email')}
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center space-x-1.5 ${
@@ -57,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               <Send className="h-3.5 w-3.5" />
-              <span>Master Email Draft</span>
+              <span>Master Pitch</span>
             </button>
 
             <button
@@ -70,17 +93,6 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <Layers className="h-3.5 w-3.5" />
               <span>Precedent Comps</span>
-            </button>
-
-            <button
-              onClick={() => setActiveTab('pipeline')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                activeTab === 'pipeline'
-                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
-                  : 'text-slate-400 hover:text-white hover:bg-slate-900'
-              }`}
-            >
-              Lender Directory ({totalCount})
             </button>
 
             <button
@@ -114,7 +126,7 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
             >
               <AlertTriangle className="h-3.5 w-3.5 text-amber-400" />
-              <span>Bounce Auditor</span>
+              <span>Delivery Auditor</span>
             </button>
 
             <button
