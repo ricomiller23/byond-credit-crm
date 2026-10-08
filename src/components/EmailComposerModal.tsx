@@ -176,7 +176,7 @@ export const EmailComposerModal: React.FC<EmailComposerModalProps> = ({
               <div className="p-2.5 rounded-lg bg-slate-800/40 border border-slate-700/60 flex items-center space-x-2">
                 <Video className="h-4 w-4 text-amber-400" />
                 <div>
-                  <div className="font-medium text-white">Presentation 1.mov</div>
+                  <div className="font-medium text-white">Presentation 1 (Attached & Streamable)</div>
                   <div className="text-[10px] text-slate-400">95s Architecture Walkthrough</div>
                 </div>
               </div>
@@ -185,7 +185,7 @@ export const EmailComposerModal: React.FC<EmailComposerModalProps> = ({
               <div className="p-2.5 rounded-lg bg-slate-800/40 border border-slate-700/60 flex items-center space-x-2">
                 <Video className="h-4 w-4 text-emerald-400" />
                 <div>
-                  <div className="font-medium text-white">Presentation 2.mp4</div>
+                  <div className="font-medium text-white">Presentation 2 (Attached & Streamable)</div>
                   <div className="text-[10px] text-slate-400">186s OnliYou Settlement Demo</div>
                 </div>
               </div>
@@ -197,10 +197,10 @@ export const EmailComposerModal: React.FC<EmailComposerModalProps> = ({
                 Attached:
               </span>
               <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300">
-                BYOND_OnliBitcoin_Patent_Teaser.docx
+                BYOND_OnliBitcoin_Patent.docx
               </span>
               <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300">
-                BYOND_1Lender_Deal_Points_with_Objections.docx
+                BYOND_1Lender_Deal_Points.docx
               </span>
               <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300">
                 Teknos Valuation Opinion ($340M–$460M)

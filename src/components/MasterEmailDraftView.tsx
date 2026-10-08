@@ -44,7 +44,7 @@ export const MasterEmailDraftView: React.FC<MasterEmailDraftViewProps> = ({
               Master Outbound Deal Memo & Executive Teaser
             </h2>
             <p className="text-xs text-slate-300 mt-1 max-w-2xl leading-relaxed">
-              Synthesized from <code className="text-amber-300 font-mono">BYOND_1Lender_Deal_Points_with_Objections.docx</code>, the <code className="text-amber-300 font-mono">BYOND_OnliBitcoin_Patent_Teaser.docx</code>, and the Teknos Valuation Opinion. Includes direct video walk-through enclosures and the interactive Samply audio player.
+              Synthesized from <code className="text-amber-300 font-mono">BYOND_1Lender_Deal_Points.docx</code>, the <code className="text-amber-300 font-mono">BYOND_OnliBitcoin_Patent.docx</code>, and the Teknos Valuation Opinion. Includes direct video walk-through enclosures and the interactive Samply audio player.
             </p>
           </div>
 
@@ -153,7 +153,7 @@ export const MasterEmailDraftView: React.FC<MasterEmailDraftViewProps> = ({
                 <Video className="h-4 w-4" />
               </div>
               <div>
-                <div className="font-bold text-white text-xs">Presentation 1.mov</div>
+                <div className="font-bold text-white text-xs">Presentation 1 (Attached & Streamable)</div>
                 <div className="text-[10px] text-slate-400">95s Architecture Walkthrough</div>
               </div>
             </div>
@@ -164,7 +164,7 @@ export const MasterEmailDraftView: React.FC<MasterEmailDraftViewProps> = ({
                 <Video className="h-4 w-4" />
               </div>
               <div>
-                <div className="font-bold text-white text-xs">Presentation 2.mp4</div>
+                <div className="font-bold text-white text-xs">Presentation 2 (Attached & Streamable)</div>
                 <div className="text-[10px] text-slate-400">186s OnliYou Tangible Settlement Demo</div>
               </div>
             </div>

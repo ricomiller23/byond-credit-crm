@@ -133,36 +133,64 @@ export const CollateralVault: React.FC = () => {
           </div>
 
           {/* Video 1 */}
-          <div className="bg-slate-950 p-4 rounded-xl border border-slate-800">
-            <div className="flex items-center justify-between mb-2">
-              <span className="p-2 rounded-lg bg-amber-500/10 text-amber-400">
-                <Video className="h-4 w-4" />
-              </span>
-              <span className="text-[10px] font-mono text-slate-400">95s • 720x1280</span>
+          <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <span className="p-2 rounded-lg bg-amber-500/10 text-amber-400">
+                  <Video className="h-4 w-4" />
+                </span>
+                <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">95s • Streamable</span>
+              </div>
+              <h4 className="font-bold text-white text-xs mb-1">Presentation 1 (Venue & Custody Demo)</h4>
+              <p className="text-[11px] text-slate-400 mb-3">
+                Executive demo of the BYOND private trading venue, non-custodial Bitcoin wallet, and order flow.
+              </p>
             </div>
-            <h4 className="font-bold text-white text-xs mb-1">Presentation 1.mov</h4>
-            <p className="text-[11px] text-slate-400 mb-3">
-              Executive demo of the BYOND private trading venue, non-custodial Bitcoin wallet, and order flow.
-            </p>
-            <div className="p-2 rounded bg-slate-900 border border-slate-800 text-[10px] font-mono text-slate-400 truncate">
-              Path: ~/Downloads/Presentation 1.mov
+            <div className="space-y-2">
+              <video 
+                src="/videos/Presentation_1.mp4" 
+                controls 
+                preload="metadata"
+                className="w-full rounded-lg border border-slate-800 bg-black aspect-[9/16] max-h-56 object-cover mx-auto shadow-md"
+              />
+              <a
+                href="/videos/Presentation_1.mp4"
+                download="Presentation_1.mp4"
+                className="w-full py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-[11px] font-semibold flex items-center justify-center space-x-1 transition-colors"
+              >
+                <span>Download Video 1 (10 MB)</span>
+              </a>
             </div>
           </div>
 
           {/* Video 2 */}
-          <div className="bg-slate-950 p-4 rounded-xl border border-slate-800">
-            <div className="flex items-center justify-between mb-2">
-              <span className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
-                <Video className="h-4 w-4" />
-              </span>
-              <span className="text-[10px] font-mono text-slate-400">186s • 720x1280</span>
+          <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <span className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+                  <Video className="h-4 w-4" />
+                </span>
+                <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">186s • Streamable</span>
+              </div>
+              <h4 className="font-bold text-white text-xs mb-1">Presentation 2 (Tangible Possession Demo)</h4>
+              <p className="text-[11px] text-slate-400 mb-3">
+                Technical demonstration of single-owner off-chain settlement finality and tangible possession.
+              </p>
             </div>
-            <h4 className="font-bold text-white text-xs mb-1">Presentation 2.mp4</h4>
-            <p className="text-[11px] text-slate-400 mb-3">
-              Technical demonstration of single-owner off-chain settlement finality and tangible possession.
-            </p>
-            <div className="p-2 rounded bg-slate-900 border border-slate-800 text-[10px] font-mono text-slate-400 truncate">
-              Path: ~/Downloads/Presentation 2.mp4
+            <div className="space-y-2">
+              <video 
+                src="/videos/Presentation_2.mp4" 
+                controls 
+                preload="metadata"
+                className="w-full rounded-lg border border-slate-800 bg-black aspect-[9/16] max-h-56 object-cover mx-auto shadow-md"
+              />
+              <a
+                href="/videos/Presentation_2.mp4"
+                download="Presentation_2.mp4"
+                className="w-full py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-[11px] font-semibold flex items-center justify-center space-x-1 transition-colors"
+              >
+                <span>Download Video 2 (9.7 MB)</span>
+              </a>
             </div>
           </div>
         </div>

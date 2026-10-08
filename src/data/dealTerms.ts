@@ -43,12 +43,12 @@ export const DEAL_TERMS = {
   documentsAttached: [
     {
       title: "BYOND OnliBitcoin Patent Teaser",
-      filename: "BYOND_OnliBitcoin_Patent_Teaser.docx",
+      filename: "BYOND_OnliBitcoin_Patent.docx",
       category: "Executive Teaser"
     },
     {
       title: "Lender Deal Points & Credit Committee Objections",
-      filename: "BYOND_1Lender_Deal_Points_with_Objections.docx",
+      filename: "BYOND_1Lender_Deal_Points.docx",
       category: "Credit Term Sheet & Defense Memo"
     },
     {
@@ -127,13 +127,15 @@ INTEGRATED DEMOS, VIDEO ENCLOSURES & AUDIO PRESENTATION:
 To review the technology, patent mechanics, and trading infrastructure in action, please access the following materials:
 • Interactive Audio/Video Presentation & Architecture Walkthrough (Dhryl Anton):
   https://samply.app/p/WtNAIwo9p8A4TsMWzgJU?si=LEhOhNSucnVZgRkbcDUel9cx8Oi2
-• Enclosed Video 1 (Presentation 1.mov): 95-second executive demonstration of the BYOND private trading venue, non-custodial custody, and off-chain order flow.
-• Enclosed Video 2 (Presentation 2.mp4): 186-second deep-dive into OnliYou tangible Bitcoin possession, single identifiable owner protocol, and instant settlement finality.
+• Enclosed Video 1 (Presentation 1.mp4): 95-second executive demonstration of the BYOND private trading venue, non-custodial custody, and off-chain order flow [Attached & Streamable]:
+  Direct Video Stream: https://byond-credit-crm.vercel.app/videos/Presentation_1.mp4
+• Enclosed Video 2 (Presentation 2.mp4): 186-second deep-dive into OnliYou tangible Bitcoin possession, single identifiable owner protocol, and instant settlement finality [Attached & Streamable]:
+  Direct Video Stream: https://byond-credit-crm.vercel.app/videos/Presentation_2.mp4
 • Institutional Virtual Data Room: dealflow.onlibtc.com/investor
 
 TRANSACTION DOCUMENTS ATTACHED:
-1. BYOND_OnliBitcoin_Patent_Teaser.docx (Executive Credit Teaser & Metrics)
-2. BYOND_1Lender_Deal_Points_with_Objections.docx (Credit Committee Defense Memo & Term Sheet)
+1. BYOND_OnliBitcoin_Patent.docx (Executive Credit Teaser & Metrics)
+2. BYOND_1Lender_Deal_Points.docx (Credit Committee Defense Memo & Term Sheet)
 3. Teknos Independent Valuation Opinion (Dated September 3, 2026 — $340M to $460M)
 
 Target close is December 15, 2026. Are you available for a brief 20-minute call next week to review the patent valuation, collateral package, and term sheet?
